@@ -7,6 +7,7 @@ def ogList(maxNumber):
     for i in range(1,maxNumber+1):
         leList.append(i)
     return leList
+
 def rightOrWrong(guess, currentList):
     feedback = input("HIGHER, LOWER OR CORRECT?")
     if feedback.lower().startswith("c"):
@@ -24,7 +25,7 @@ while playing:
     numList = ogList(maxNum)
     print(numList)
     while True:
-        guess = numList[int(len(numList)/2)-1]
+        guess = numList[int(len(numList)/2)]
         print(f"MY GUESS IS {guess}")
         numList = rightOrWrong(guess, numList)
         print(numList)
